@@ -11,6 +11,12 @@
   </app-multi-select>
 
 <!--    TODO add another multiselect here -->
+  <app-multi-select
+    [items]='statuses'
+    (selectionChange)="onSelectChange($event)"
+  >
+  </app-multi-select>
+
   </div>
   <div class="experience-details-container">
     <div class="about-containers">
