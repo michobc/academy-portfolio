@@ -1,0 +1,29 @@
+<section id="about">
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title" (click)=toLogInputFunction()>About Me</h1>
+  <div class="section-container">
+    <div class="about-details-container">
+      <div class="about-containers">
+
+        @for (info of infos; track info.id){
+          <div class="details-container">
+            <img
+              [src]="info.image"
+              alt="icon"
+              class="icon"
+            />
+            <h3>{{info.type}}</h3>
+            <p>{{info.text1}}<br />{{info.text2}}</p>
+          </div>
+        }
+
+      </div>
+
+      <div class="text-container">
+        <p>
+          {{profile.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

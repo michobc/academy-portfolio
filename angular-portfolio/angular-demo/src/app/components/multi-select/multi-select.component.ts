@@ -22,6 +22,7 @@ import {IPerson} from "../../interfaces/project";
 })
 export class MultiSelectComponent implements OnInit, OnChanges {
   @Input() items: ICategory[] = []
+  @Input() type: string = ""
   @Output() selectionChange = new EventEmitter<ICategory[]>();
   isDropdownVisible = false
   filteredItems: ICategory[] = []

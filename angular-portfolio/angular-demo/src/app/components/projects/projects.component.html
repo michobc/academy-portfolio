@@ -5,6 +5,7 @@
   <div class="selection">
 
   <app-multi-select
+    type="Category"
     [items]='categories'
     (selectionChange)="onSelectChange($event)"
   >
@@ -12,6 +13,7 @@
 
 <!--    TODO add another multiselect here -->
   <app-multi-select
+    type="Status"
     [items]='statuses'
     (selectionChange)="onSelectChange($event)"
   >

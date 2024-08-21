@@ -3,6 +3,7 @@ import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {IProject} from "../interfaces/project";
 import {ICategory} from "../interfaces/category";
+import {IAboutMe} from "../interfaces/aboutme";
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,13 @@ export class ProjectService {
           categoryIds: filters ?? []
         }
       });
+  }
+
+  //fetching about me information from my fake server
+  getInfos(): Observable<IAboutMe[]> {
+    return this._httpClient.get<IAboutMe[]>('https://my-json-server.typicode.com/michobc/frontend-server-demo/about-me')
+  }
+  getProfile(): Observable<any> {
+    return this._httpClient.get<any>('https://my-json-server.typicode.com/michobc/frontend-server-demo/profile')
   }
 }

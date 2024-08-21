@@ -60,4 +60,6 @@ export class ProjectsComponent implements OnInit {
   onSelectChange(selection: ICategory[]) {
     this.getProjects(selection.map(selectionEntry => selectionEntry.id));
   }
+
+  protected readonly onclick = onclick;
 }
