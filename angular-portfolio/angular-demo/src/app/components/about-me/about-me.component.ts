@@ -16,12 +16,8 @@ export class AboutMeComponent implements OnInit {
   infos: IAboutMe[] = [];
   profile: {
     description: string;
-    name: string;
-    title: string;
   } = {
     description: '',
-    name: '',
-    title: ''
   };
 
   constructor(private projectService: ProjectService) {}
